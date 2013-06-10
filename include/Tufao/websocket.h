@@ -28,6 +28,12 @@
 
 #include <QtNetwork/QAbstractSocket>
 
+
+#if defined(NO_ERROR)
+# define __WINERROR_WORKAROUND NO_ERROR
+# undef NO_ERROR
+#endif
+
 class QSslError;
 
 namespace Tufao {
@@ -59,6 +65,7 @@ public:
           No error
           */
         NO_ERROR = 0,
+
         /*!
           See QAbstractSocket::ConnectionRefusedError.
 
@@ -478,5 +485,9 @@ private:
 };
 
 } // namespace Tufao
+
+#if defined(__WINERROR_WORKAROUND)
+# define NO_ERROR __WINERROR_WORKAROUND
+#endif
 
 #endif // TUFAO_WEBSOCKET_H
