@@ -51,10 +51,11 @@ QByteArray stringify(const QMap<QByteArray, QByteArray> &map, char sep, char eq,
 inline QByteArray unescape(const QByteArray &string, bool percentEncoding,
                            char percent)
 {
-    QByteArray ret(percentEncoding
+    QByteArray ret(string);
+    ret.replace('+', ' ');
+    ret = (percentEncoding
                    ? QByteArray::fromPercentEncoding(string, percent)
                    : string);
-    ret.replace('+', ' ');
     return ret;
 }
 
