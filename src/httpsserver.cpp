@@ -52,7 +52,11 @@ void HttpsServer::incomingConnection(int socketDescriptor)
 #if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
     socket->setProtocol(QSsl::TlsV1_0);
 #else
+#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
     socket->setProtocol(QSsl::TlsV1);
+#else
+    socket->setProtocol(QSsl::TlsV1_0);
+#endif
 #endif
     socket->setLocalCertificate(priv->localCertificate);
     socket->setPrivateKey(priv->privateKey);
