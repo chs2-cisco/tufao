@@ -1,4 +1,6 @@
-include(${QT_USE_FILE})
+if(QT4_FOUND)
+    include(${QT_USE_FILE})
+endif()
 
 # Source files
 set(tufao_SRC
@@ -53,14 +55,12 @@ add_definitions(-DTUFAO_LIBRARY
     -Wall
 )
 
-qt4_wrap_cpp(tufao_MOC ${tufao_MOC_HDRS}
-    OPTIONS
-    "-DQT_VERSION_MAJOR=${QT_VERSION_MAJOR}"
-    "-DQT_VERSION_MINOR=${QT_VERSION_MINOR}"
-    "-DQT_VERSION_PATCH=${QT_VERSION_PATCH}"
-)
-add_library(tufao SHARED ${tufao_SRC} ${tufao_MOC})
-target_link_libraries(tufao ${QT_LIBRARIES})
+add_library(tufao SHARED ${tufao_SRC})
+if(QT4_FOUND)
+    target_link_libraries(tufao ${QT_LIBRARIES})
+elseif(Qt5_FOUND)
+    qt5_use_modules(tufao Core Network)
+endif()
 
 set_target_properties(
     tufao
