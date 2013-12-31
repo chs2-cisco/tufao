@@ -12,6 +12,9 @@ else()
     message("tufao using Qt version ${QTVERSION}")
 endif()
 
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 set(BUFFER_SIZE 128 CACHE STRING
     "The default buffer size (in bytes) used by Tufão")
 add_definitions(-DBUFFER_SIZE=${BUFFER_SIZE})
