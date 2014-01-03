@@ -1,15 +1,11 @@
 # Project Tufão
 project(tufao)
 cmake_minimum_required(VERSION 2.8.9)
-find_package(Qt4 4.7 COMPONENTS QtCore QtNetwork QUIET)
-if(NOT QT4_FOUND)
-    find_package(Qt5 5.0 COMPONENTS Core Network REQUIRED)
-endif()
 
-if(NOT QT4_FOUND AND NOT Qt5_FOUND)
-    message(FATAL_ERROR "*********   No Qt version found, stopping!!!   *********")
+if(USE_QT5)
+    find_package(Qt5 5.0 COMPONENTS Core Network REQUIRED)
 else()
-    message("tufao using Qt version ${QTVERSION}")
+    find_package(Qt4 4.7 COMPONENTS QtCore QtNetwork REQUIRED)
 endif()
 
 set(CMAKE_AUTOMOC ON)
