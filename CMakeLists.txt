@@ -1,7 +1,9 @@
 # Project Tufão
 project(tufao)
 cmake_minimum_required(VERSION 2.8.9)
-cmake_policy(SET CMP0020 OLD)
+if(POLICY CMP0020)
+	cmake_policy(SET CMP0020 OLD)
+endif()
 
 if(USE_QT5)
     find_package(Qt5 5.0 COMPONENTS Core Network REQUIRED)
