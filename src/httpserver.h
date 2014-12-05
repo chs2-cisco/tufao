@@ -188,7 +188,7 @@ protected:
       Reimplement this function to alter the server's behavior when a connection
       is available.
       */
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#if QT_VERSION >= 0x050000
     virtual void incomingConnection(qintptr socketDescriptor);
 #else
     virtual void incomingConnection(int socketDescriptor);
@@ -234,7 +234,7 @@ protected:
     virtual void upgrade(HttpServerRequest *request, const QByteArray &head);
 
 private slots:
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#if QT_VERSION >= 0x050000
     void onNewConnection(qintptr socketDescriptor);
 #else
     void onNewConnection(int socketDescriptor);

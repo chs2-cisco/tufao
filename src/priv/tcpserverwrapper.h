@@ -31,14 +31,14 @@ public:
     explicit TcpServerWrapper(QObject *parent = 0);
 
 signals:
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#if QT_VERSION >= 0x050000
     void newConnection(qintptr socketDescriptor);
 #else
 	void newConnection(int socketDescriptor);
 #endif
 
 protected:
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#if QT_VERSION >= 0x050000
     void incomingConnection(qintptr socketDescriptor);
 #else
 	void incomingConnection(int socketDescriptor);

@@ -25,7 +25,7 @@ TcpServerWrapper::TcpServerWrapper(QObject *parent) :
 {
 }
 
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#if QT_VERSION >= 0x050000
 void TcpServerWrapper::incomingConnection(qintptr socketDescriptor)
 #else
 void TcpServerWrapper::incomingConnection(int socketDescriptor)
