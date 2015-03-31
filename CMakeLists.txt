@@ -5,11 +5,7 @@ if(POLICY CMP0020)
 	cmake_policy(SET CMP0020 OLD)
 endif()
 
-if(USE_QT5)
-    find_package(Qt5 5.0 COMPONENTS Core Network REQUIRED)
-else()
-    find_package(Qt4 4.7 COMPONENTS QtCore QtNetwork REQUIRED)
-endif()
+find_package(Qt5 5.0 COMPONENTS Core Network REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
