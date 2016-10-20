@@ -75,6 +75,8 @@ public:
       */
     void setLocalCertificate(const QSslCertificate &certificate);
 
+    void setLocalCertificateChain(const QList<QSslCertificate> &localChain);
+
     /*!
       Sets the private key to \p key.
 

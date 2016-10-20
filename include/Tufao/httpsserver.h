@@ -74,6 +74,8 @@ public:
       This member function should be called before Tufao::HttpsServer::listen
       */
     void setLocalCertificate(const QSslCertificate &certificate);
+    void setLocalCertificateChain(const QList<QSslCertificate> &localChain);
+
 
     /*!
       Sets the private key to \p key.

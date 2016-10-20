@@ -37,6 +37,12 @@ void HttpsServer::setLocalCertificate(const QSslCertificate &certificate)
     priv->localCertificate = certificate;
 }
 
+void HttpsServer::setLocalCertificateChain(const QList<QSslCertificate> &localChain)
+{
+    priv->localCertificateChain = localChain;
+}
+
+
 void HttpsServer::setPrivateKey(const QSslKey &key)
 {
     priv->privateKey = key;
@@ -59,6 +65,8 @@ void HttpsServer::incomingConnection(int socketDescriptor)
 #endif
 #endif
     socket->setLocalCertificate(priv->localCertificate);
+    if(priv->localCertificateChain.count() > 0)
+      socket->setLocalCertificateChain(priv->localCertificateChain);
     socket->setPrivateKey(priv->privateKey);
 
     if (!socket->setSocketDescriptor(socketDescriptor)) {

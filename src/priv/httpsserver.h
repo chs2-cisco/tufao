@@ -30,6 +30,7 @@ namespace Tufao {
 struct HttpsServer::Priv
 {
     QSslCertificate localCertificate;
+    QList<QSslCertificate> localCertificateChain;
     QSslKey privateKey;
 };
 
