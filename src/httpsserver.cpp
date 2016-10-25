@@ -68,6 +68,7 @@ void HttpsServer::incomingConnection(int socketDescriptor)
     if(priv->localCertificateChain.count() > 0)
       socket->setLocalCertificateChain(priv->localCertificateChain);
     socket->setPrivateKey(priv->privateKey);
+    socket->setPeerVerifyMode(QSslSocket::VerifyNone);
 
     if (!socket->setSocketDescriptor(socketDescriptor)) {
         delete socket;
