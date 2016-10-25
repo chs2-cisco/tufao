@@ -55,15 +55,7 @@ void HttpsServer::incomingConnection(int socketDescriptor)
 #endif
 {
     QSslSocket *socket = new QSslSocket;
-#if QT_VERSION >= 0x050000
-    socket->setProtocol(QSsl::TlsV1_0);
-#else
-#if QT_VERSION < 0x050000
-    socket->setProtocol(QSsl::TlsV1);
-#else
-    socket->setProtocol(QSsl::TlsV1_0);
-#endif
-#endif
+    socket->setProtocol(QSsl::SecureProtocols);
     socket->setLocalCertificate(priv->localCertificate);
     if(priv->localCertificateChain.count() > 0)
       socket->setLocalCertificateChain(priv->localCertificateChain);
