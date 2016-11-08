@@ -20,10 +20,10 @@ set(TUFAO_VERSION_MINOR 6)
 set(TUFAO_VERSION_PATCH 0)
 set(TUFAO_VERSION ${TUFAO_VERSION_MAJOR}.${TUFAO_VERSION_MINOR}.${TUFAO_VERSION_PATCH})
 set(TUFAO_BRIEF "An asynchronous web framework for C++ built on top of Qt")
-set(includedir include/tufao-${TUFAO_VERSION_MAJOR})
+set(includedir include)
 set(libdir lib)
 
 # Targets
 add_subdirectory(src)
-#add_subdirectory(include)
+add_subdirectory(include)
 

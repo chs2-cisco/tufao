@@ -70,32 +70,15 @@ set_target_properties(
     VS_KEYWORD Qt4VSv1.0
 )
 
-IF(STANDALONE_EXTERN_BUILD)
-    INSTALL(TARGETS tufao
-        RUNTIME DESTINATION ${EXTERN_BIN_DIRECTORY}
-        LIBRARY DESTINATION ${EXTERN_BIN_DIRECTORY}
-        ARCHIVE DESTINATION ${EXTERN_LIB_DIRECTORY}
-    )
-ELSE(STANDALONE_EXTERN_BUILD)
-    IF(USE_SHARED_OBJECTS)
-        INSTALL(TARGETS tufao
-            RUNTIME DESTINATION .
-            LIBRARY DESTINATION .
-            )
-    ENDIF(USE_SHARED_OBJECTS)
-ENDIF(STANDALONE_EXTERN_BUILD)
-
-
-
-# Install info
-# install(TARGETS tufao
-#     DESTINATION "${libdir}"
-#     COMPONENT runtime
-# )
+install(TARGETS tufao
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION bin
+    ARCHIVE DESTINATION lib
+)
 # install(DIRECTORY .
-#     DESTINATION "${includedir}/Tufao"
-#     COMPONENT development
-#     FILES_MATCHING PATTERN *.h
-#     PATTERN doc EXCLUDE
-#     PATTERN priv EXCLUDE
+#      DESTINATION "${includedir}/Tufao"
+#      COMPONENT development
+#      FILES_MATCHING PATTERN *.h
+#      PATTERN doc EXCLUDE
+#      PATTERN priv EXCLUDE
 # )
