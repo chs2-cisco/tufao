@@ -70,9 +70,15 @@ set_target_properties(
     VS_KEYWORD Qt4VSv1.0
 )
 
+if(WIN32)
+	set(LIBDEST bin)
+else()
+	set(LIBDEST lib)
+endif()
+
 install(TARGETS tufao
     RUNTIME DESTINATION bin
-    LIBRARY DESTINATION bin
+    LIBRARY DESTINATION ${LIBDEST}
     ARCHIVE DESTINATION lib
 )
 # install(DIRECTORY .
