@@ -20,6 +20,19 @@
   SOFTWARE.
   */
 
+/*
+ * BTUC-13170: HTTPS support for API provider
+ * Now the API provider serves plain http + ws on port 5505 and https + wss
+ * on port 5506. An SSL certificate is built in that uses CN=api.12bar.net
+ * and that host assumed to point to localhost.
+ * Oct 20, 2016, Teemu Patja (Cisco Systems, Inc.)
+ */
+/*
+ * BTUC-2604: added Tufao framework to extern (now built when running standalone extern build).
+ * Pre-built dll+lib for win32 added also, still need binaries for osx.
+ * Jun 5, 2013, Teemu Patja (Cisco Systems, Inc.)
+ */
+
 #ifndef TUFAO_HTTPSSERVER_H
 #define TUFAO_HTTPSSERVER_H
 

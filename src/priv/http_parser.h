@@ -18,6 +18,13 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
+
+/*
+ * BTUC-2604: added Tufao framework to extern (now built when running standalone extern build).
+ * Pre-built dll+lib for win32 added also, still need binaries for osx.
+ * Jun 5, 2013, Teemu Patja (Cisco Systems, Inc.)
+ */
+
 #ifndef http_parser_h
 #define http_parser_h
 #ifdef __cplusplus

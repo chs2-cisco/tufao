@@ -16,6 +16,24 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*
+ * BTUC-12768: Fix a '+' character decoding issue in Tufao library
+ * Sep 22, 2016, Ilja Mäki (Cisco Systems, Inc.)
+ */
+/*
+ * BTUC-4332: simplified function
+ * Dec 13, 2013, Teemu Patja (Cisco Systems, Inc.)
+ */
+/*
+ * BTUC-4332: fixed HTTP URI unescaping in Tufao
+ * Dec 12, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+/*
+ * BTUC-2604: added Tufao framework to extern (now built when running standalone extern build).
+ * Pre-built dll+lib for win32 added also, still need binaries for osx.
+ * Jun 5, 2013, Teemu Patja (Cisco Systems, Inc.)
+ */
+
 #include "querystring.h"
 #include <QtCore/QByteArray>
 

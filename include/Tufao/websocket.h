@@ -20,6 +20,20 @@
   SOFTWARE.
   */
 
+/*
+ * BTUC-2604:
+ * fixed HTTP backend into mostly working state
+ * worked around winerrr.h name clash in Tufao's websocket.h
+ * Jun 11, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+/*
+ * BTUC-2604:
+ * added missing Tufao headers to proper dir and linking scp to tufao
+ * implemented HTTP request parser
+ * refactoring
+ * Jun 7, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+
 #ifndef TUFAO_WEBSOCKET_H
 #define TUFAO_WEBSOCKET_H
 

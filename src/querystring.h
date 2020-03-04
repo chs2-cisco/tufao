@@ -20,6 +20,16 @@
   SOFTWARE.
   */
 
+/*
+ * BTUC-12768: Fix a '+' character decoding issue in Tufao library
+ * Sep 22, 2016, Ilja Mäki (Cisco Systems, Inc.)
+ */
+/*
+ * BTUC-2604: added Tufao framework to extern (now built when running standalone extern build).
+ * Pre-built dll+lib for win32 added also, still need binaries for osx.
+ * Jun 5, 2013, Teemu Patja (Cisco Systems, Inc.)
+ */
+
 #ifndef TUFAO_QUERYSTRING_H
 #define TUFAO_QUERYSTRING_H
 

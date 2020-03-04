@@ -20,6 +20,18 @@
   SOFTWARE.
   */
 
+/*
+ * BTUC-7249: fix Tufao build errors on OSX with QT4
+ * Dec 5, 2014, Teemu Patja (Cisco Systems, Inc.)
+*/
+/*
+ * BTUC-2604:
+ * added missing Tufao headers to proper dir and linking scp to tufao
+ * implemented HTTP request parser
+ * refactoring
+ * Jun 7, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+
 #ifndef TUFAO_SERVER_H
 #define TUFAO_SERVER_H
 

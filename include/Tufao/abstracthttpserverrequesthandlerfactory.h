@@ -20,6 +20,14 @@
   SOFTWARE.
   */
 
+/*
+ * BTUC-2604:
+ * added missing Tufao headers to proper dir and linking scp to tufao
+ * implemented HTTP request parser
+ * refactoring
+ * Jun 7, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+
 #ifndef TUFAO_ABSTRACTHTTPSERVERREQUESTHANDLERFACTORY_H
 #define TUFAO_ABSTRACTHTTPSERVERREQUESTHANDLERFACTORY_H
 

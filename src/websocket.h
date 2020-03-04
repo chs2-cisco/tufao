@@ -20,6 +20,11 @@
   SOFTWARE.
   */
 
+/*
+ * (Github issue vinipsmaker#4) Added workaround for naming clash with w……inerror.h
+ * Jun 11, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+
 #ifndef TUFAO_WEBSOCKET_H
 #define TUFAO_WEBSOCKET_H
 

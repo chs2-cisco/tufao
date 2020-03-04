@@ -1,3 +1,16 @@
+# Fix dylib install dir on OS-X
+# Jan 11, 2017, Jukka Lehtniemi (Cisco Systems, Inc.)
+
+# Fix CMake for standalone build
+# Nov 8, 2016, Jukka Lehtniemi (Cisco Systems, Inc.)
+
+# BTUC-1392: Qt 4/5 CMakeLists.txt fixes to tufao
+# Dec 31, 2013, Kimmo Karvinen (Cisco Systems, Inc.)
+
+# BTUC-2604: added Tufao framework to extern (now built when running standalone extern build).
+# Pre-built dll+lib for win32 added also, still need binaries for osx.
+# Jun 5, 2013, Teemu Patja (Cisco Systems, Inc.)
+
 if(QT4_FOUND)
     include(${QT_USE_FILE})
 endif()

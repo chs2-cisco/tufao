@@ -16,6 +16,12 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*
+ * BTUC-2604: added Tufao framework to extern (now built when running standalone extern build).
+ * Pre-built dll+lib for win32 added also, still need binaries for osx.
+ * Jun 5, 2013, Teemu Patja (Cisco Systems, Inc.)
+*/
+
 #include "priv/httppluginserver.h"
 #include "abstracthttpserverrequesthandlerfactory.h"
 #include "httpserverresponse.h"
